@@ -17,6 +17,8 @@ class Game
     SqlRunner.run(sql, values)
   end
 
+  def self.show_all
+
   def save() #Adds an entry into the games table.
     sql = 'INSERT INTO games(title, genre, theme) VALUES($1, $2, $3) RETURNING id'
     values = [@title, @genre, @theme]
