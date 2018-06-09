@@ -33,5 +33,4 @@ class Test_customer < Minitest::Test
      assert_equal("Male", result)
    end
 
-
 end

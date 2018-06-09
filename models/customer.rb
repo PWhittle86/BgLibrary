@@ -2,8 +2,7 @@ require_relative('../db/sqlrunner')
 
 class Customer
 
-  attr_reader :id
-  attr_accessor :first_name, :last_name, :age, :gender
+  attr_reader :id, :first_name, :last_name, :age, :gender
 
   def initialize(customer_hash)
     @id = customer_hash['id'].to_i
@@ -23,7 +22,7 @@ class Customer
     sql = 'INSERT INTO customers (first_name, last_name, age, gender) VALUES ($1, $2, $3, $4) RETURNING *'
     values = [@first_name, @last_name, @age, @gender]
     output = SqlRunner.run(sql, values)
-    @id = output[0][:id].to_i
+    @id = output[0]['id'].to_i
   end
 
   def update() #Updates the specified entry in the customers table.
