@@ -1,1 +1,7 @@
-<p>Welcome to the Game Catalogue. All of your games (including rented titles) are listed below.</p>
+<p>Welcome to the Game Catalogue.</p>
+
+<%for game in @games %>
+<p>Name: <a href="/games/<%=game.id%>"><%=game.title%></a> Status: <%=game.status%></p>
+<%end%>
+
+<p><a href="/games/new/">New Game</a>

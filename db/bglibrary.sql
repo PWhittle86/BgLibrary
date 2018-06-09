@@ -6,7 +6,8 @@ CREATE TABLE games(
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
   genre VARCHAR(255),
-  theme VARCHAR(255)
+  theme VARCHAR(255),
+  status VARCHAR(255)
 );
 
 CREATE TABLE customers(
