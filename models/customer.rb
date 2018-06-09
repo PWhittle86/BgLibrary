@@ -2,7 +2,7 @@ require_relative('../db/sqlrunner')
 
 class Customer
 
-  attr_reader :id,
+  attr_reader :id
   attr_accessor :first_name, :last_name, :age, :gender
 
   def initialize(customer_hash)

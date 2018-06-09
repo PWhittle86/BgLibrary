@@ -12,17 +12,17 @@ class Test_game < MiniTest::Test
       @test_game = Game.new(game_hash)
   end
 
-  def test_title
+  def test_title #Checks whether the title field is being correctly populated.
     result = @test_game.title
     assert_equal("Settlers of Catan", result)
   end
 
-  def test_genre
+  def test_genre #Checks whether the genre field is being correctly populated.
     result = @test_game.genre
     assert_equal("Negotiation", result)
   end
 
-  def test_theme
+  def test_theme #Checks whether the theme field is being correctly populated.
     result = @test_game.theme
     assert_equal("Settling", result)
   end
