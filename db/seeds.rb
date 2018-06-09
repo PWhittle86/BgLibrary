@@ -2,7 +2,7 @@ require('pry-byebug')
 require_relative('../models/game')
 
 
-#The seeds below are games that have been added to the library.
+#The seeds below are games to initially populate the game library. The categories and themes have been selected in such a way to aid testing later functions, such as the ability to be able to filter stock results by genre or theme.
 
 game1 = Game.new(
   {"title" => "Memoir 44",
@@ -46,6 +46,8 @@ game5.save
 
 
 ###################################################
+
+
 
 
 
