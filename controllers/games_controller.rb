@@ -18,3 +18,16 @@ end
 get '/games/new/' do
   erb (:"games/add")
 end
+
+post '/games/:id/delete' do
+  @game = Game.find(params[:id])
+  @notification = Game.find(params[:id])
+  @game.delete
+  erb (:"games/delete_confirmation")
+end
+
+post '/games/create/' do
+  @game = Game.new(params)
+  @game.save
+  erb (:"games/game_added")
+end

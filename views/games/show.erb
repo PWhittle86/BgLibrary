@@ -2,3 +2,7 @@
 <p>Status: <%=@game.status%></p>
 <p>Genre: <%=@game.genre%></p>
 <p>Theme: <%=@game.theme%></p>
+
+<form method='post' action='/games/<%=@game.id%>/delete'/>
+<input type="submit" value="Delete Game"/>
+</form>
