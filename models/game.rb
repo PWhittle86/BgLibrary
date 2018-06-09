@@ -2,7 +2,8 @@ require_relative('../db/sqlrunner')
 
 class Game
 
-  attr_reader :id, :title, :genre, :theme
+  attr_reader :id
+  attr_accessor :title, :genre, :theme
 
   def initialize(game_hash)
     @id = game_hash['id'].to_i
@@ -25,13 +26,15 @@ class Game
   end
 
   def update() #Updates an existing entry in the games table.
-    sql = 'UPDATE game SET (title, genre, theme) = ($1, $2, $3) WHERE id = $4'
+    sql = 'UPDATE games SET (title, genre, theme) = ($1, $2, $3) WHERE id = $4'
     values = [@title, @genre, @theme, @id]
     SqlRunner.run(sql, values)
   end
 
   def delete() #Deletes the selected game from the table.
-    sql = 'DELETE FROM games WHERE $1 = id'
+    sql = 'DELETE FROM games WHERE id = $1'
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
 
