@@ -12,8 +12,8 @@ _As a rental store manager_<br/>
 _I want to be able to view accurate data about my stock_<br/>
 _So that I can keep my system up to date_<br/>
 
-**Acceptance Criteria** Store managers should be able to create new stock items. <br />
-**Acceptance Criteria** Store managers should be able to delete existing stock items. <br />
+<!-- **Acceptance Criteria** Store managers should be able to create new stock items. <br /> -->
+<!-- **Acceptance Criteria** Store managers should be able to delete existing stock items. <br /> -->
 
 
 #### Manage customers
@@ -23,9 +23,9 @@ _As a rental store manager_<br />
 _I want to be able to manage my new customers_<br />
 _So that I can keep my system up to date_<br />\
 
-**Acceptance Criteria** Store managers should be able to add new customers to their list of registered customers. <br />
+<!-- **Acceptance Criteria** Store managers should be able to add new customers to their list of registered customers. <br /> -->
 **Acceptance Criteria** Store managers should be able to update the details of their existing customers. <br />
-**Acceptance Criteria** Store managers should be able to remove customers.
+<!-- **Acceptance Criteria** Store managers should be able to remove customers. -->
 
 #### Process Rentals
 

@@ -19,8 +19,19 @@ get '/customers/new/' do
   erb (:"customers/add")
 end
 
+get '/customers/:id/edit' do
+  erb (:"")
+end
+
 post '/customers/add/' do
   @customer = Customer.new(params)
   @customer.save
   erb (:"customers/cust_added")
+end
+
+post '/customers/:id/delete' do
+  @customer = Customer.find(params[:id])
+  @notification = Customer.find(params[:id])
+  @customer.delete
+  erb (:"customers/delete_confirmation")
 end
