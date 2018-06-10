@@ -1,0 +1,22 @@
+<p>Please amend the customer details you wish to change:</p>
+
+<form method='post' action='/customers/<%=@customer.id%>/update/'>
+
+  <label for='first_name'>First Name:</label>
+  <input id='first_name' type='text' name='first_name' value='<%=@customer.first_name%>'/>
+
+  <label for='last_name'>Last Name:</label>
+  <input id='last_name' type='text' name='last_name' value='<%=@customer.last_name%>'/>
+
+  <label for='age'>Age:</label>
+  <input id='age' type='text' name='age' value='<%=@customer.age%>'/>
+
+  <label for='gender'>Gender:</label>
+  <select id='gender' name='gender'>
+    <option value='Male'<%= "selected" if @customer.gender == "Male"%>>Male</option>
+    <option value='Female'<%= "selected" if @customer.gender == "Female"%>>Female</option>
+    <option value='Prefer_not_to_say'<%= "selected" if @customer.gender == "Prefer not to say"%>>Prefer not to say</option>
+  </select>
+
+<input type='submit' value='Save Customer Amendments'/>
+</form>

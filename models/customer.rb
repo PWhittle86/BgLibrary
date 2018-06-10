@@ -47,7 +47,7 @@ class Customer
   def update() #Updates the specified entry in the customers table.
     sql = 'UPDATE customers SET (first_name, last_name, age, gender) = ($1, $2, $3, $4) WHERE id = $5'
     values = [@first_name, @last_name, @age, @gender, @id]
-    SqlRunner.run(sql, values)
+    result = SqlRunner.run(sql, values)
   end
 
   def delete() #Deletes the specified customer from the table.

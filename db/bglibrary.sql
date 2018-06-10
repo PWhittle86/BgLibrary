@@ -1,6 +1,6 @@
+DROP TABLE IF EXISTS rentals;
 DROP TABLE IF EXISTS games;
 DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS rentals;
 
 CREATE TABLE games(
   id SERIAL PRIMARY KEY,
@@ -18,9 +18,9 @@ CREATE TABLE customers(
   gender VARCHAR(255)
 );
 
--- CREATE TABLE rentals(
---   id SERIAL PRIMARY KEY,
---   game_id REFERENCES games(id),
---   customer_id REFERENCES customers(id),
---   date_rented VARCHAR(255)
--- );
+CREATE TABLE rentals(
+  id SERIAL PRIMARY KEY,
+  date_rented VARCHAR(255),
+  game_id INT2 REFERENCES games(id),
+  customer_id INT2 REFERENCES customers(id)
+);
