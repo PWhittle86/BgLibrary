@@ -25,6 +25,14 @@ class Customer
     return output.map{|customer| Customer.new(customer)}
   end
 
+  def self.find(id) #Locates a specific entry from the database based on the specified id.
+    sql = 'SELECT * FROM customers WHERE id = $1'
+    values = [id]
+    found_entry = SqlRunner.run(sql, values)
+    result = Customer.new(found_entry.first)
+    return result
+  end
+
   def full_name()
     return "#{@first_name} #{@last_name}"
   end
