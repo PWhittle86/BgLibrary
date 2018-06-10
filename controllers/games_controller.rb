@@ -15,7 +15,7 @@ get '/games/:id' do
   erb (:"games/show")
 end
 
-get '/games/new/' do
+get '/games/new/' do #Ask an instructor why I need the extra /.
   erb (:"games/add")
 end
 
