@@ -18,6 +18,17 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
+  def self.all() #Returns all entries from the customers table.
+    sql = 'SELECT * FROM customers'
+    values = []
+    output = SqlRunner.run(sql, values)
+    return output.map{|customer| Customer.new(customer)}
+  end
+
+  def full_name()
+    return "#{@first_name} #{@last_name}"
+  end
+
   def save() #Adds an entry to the customers table.
     sql = 'INSERT INTO customers (first_name, last_name, age, gender) VALUES ($1, $2, $3, $4) RETURNING *'
     values = [@first_name, @last_name, @age, @gender]
