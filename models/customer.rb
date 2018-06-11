@@ -56,8 +56,4 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
-
-
-
-
 end

@@ -1,0 +1,15 @@
+<h2>New Rental</h2>
+
+<p>Please select a game for <%=@customer.first_name%></p>
+
+<form method='post' action='/rentals/create'>
+  <input type='hidden' name='customer_id' value='<%=@customer.id%>'/>
+  <label for='game'>Game:</label>
+  <select id='game' name='game_id'/>
+    <%for game in @games%>
+    <option value='<%=game.id%>'><%=game.title%></option>
+    <%end%>
+  </select>
+
+  <input type='submit' value='Rent Game'/>
+  </form>

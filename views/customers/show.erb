@@ -2,9 +2,14 @@
 <p>Age: <%=@customer.age%></p>
 <p>Gender: <%=@customer.gender%></p>
 
+<form method='get' action='/rentals/<%=@customer.id%>/new'/>
+<input type='submit' value="Create New Rental">
+</form>
+
 <form method='get' action='/customers/<%=@customer.id%>/edit'/>
 <input type="submit" value="Amend Customer Details"/>
 </form>
+
 <form method='post' action='/customers/<%=@customer.id%>/delete'/>
 <input type="submit" value="Delete Customer"/>
 </form>
