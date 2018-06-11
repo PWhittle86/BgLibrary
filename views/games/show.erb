@@ -1,5 +1,10 @@
 <h2><%=@game.title%></h2>
-<p>Status: <%=@game.status%></p>
+<p>Status:
+  <%if @game.renter == nil%>
+    Available
+  <%else%>
+    Rented by <%=@game.find_renter.full_name%>
+  <%end%></p>
 <p>Genre: <%=@game.genre%></p>
 <p>Theme: <%=@game.theme%></p>
 

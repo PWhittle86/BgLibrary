@@ -1,7 +1,7 @@
-<h2>Welcome to the Game Catalogue.</h2>
+<h2>Games Catalogue</h2>
 
 <%for game in @games %>
-<a href="/games/<%=game.id%>"><%=game.title%></a> Status: <%=game.status%></p>
+<a href="/games/<%=game.id%>"><%=game.title%></a></p>
 <%end%>
 
 <p><a href="/games/new/">New Game</a>

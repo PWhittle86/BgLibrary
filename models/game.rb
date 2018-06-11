@@ -1,15 +1,17 @@
 require_relative('../db/sqlrunner')
+require_relative('./customer')
 
 class Game
 
-  attr_reader :id, :title, :genre, :theme, :renter
+  attr_reader :id, :title, :genre, :theme
+  attr_accessor :renter
 
   def initialize(game_hash)
     @id = game_hash['id']
     @title = game_hash['title']
     @genre = game_hash['genre']
     @theme = game_hash['theme']
-    @renter = nil
+    @renter = game_hash['renter'] if game_hash['renter'] != nil
   end
 
   def self.delete_all() #Deletes all rows in the games table.
@@ -33,7 +35,26 @@ class Game
     return result
   end
 
-  def self.available
+  def self.available #Used to identify games that are not currently being rented.
+    sql = 'SELECT * FROM games WHERE renter IS NULL'
+    values = []
+    output = SqlRunner.run(sql, values)
+    output.map{|game| Game.new(game)}
+  end
+
+  def self.not_available #Used to identify games that are currently being rented.
+    sql = 'SELECT * FROM games WHERE renter IS NOT NULL'
+    values = []
+    output = SqlRunner.run(sql, values)
+    output.map{|game| Game.new(game)}
+  end
+
+  def find_renter() #Returns the customer renting a game.
+    sql = 'SELECT * FROM customers WHERE id = $1'
+    values = [@renter]
+    found_item = SqlRunner.run(sql, values)
+    customer = Customer.new(found_item.first)
+    return customer
   end
 
   def save() #Adds an entry into the games table.
@@ -44,8 +65,8 @@ class Game
   end
 
   def update() #Updates an existing entry in the games table.
-    sql = 'UPDATE games SET (title, genre, theme) = ($1, $2, $3) WHERE id = $4'
-    values = [@title, @genre, @theme, @id]
+    sql = 'UPDATE games SET (title, genre, theme, renter) = ($1, $2, $3, $4) WHERE id = $5'
+    values = [@title, @genre, @theme, @renter, @id]
     SqlRunner.run(sql, values)
   end
 

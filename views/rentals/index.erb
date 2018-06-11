@@ -1,1 +1,6 @@
-<h2>Rental History</h2>
+<h2>Ongoing Rentals</h2>
+<%for game in @rented_games%>
+<p><%=game.title%> is currently on rent to <%=game.find_renter.full_name%>.</p>
+<form method='post' action='/rentals/<%=game.id%>/return'/>
+<input type="submit" value="Return Game"/>
+<%end%>

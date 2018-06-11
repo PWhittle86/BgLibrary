@@ -6,12 +6,13 @@ require_relative('../models/customer')
 also_reload('./models/*')
 
 get '/rentals' do
+  @rented_games = Game.not_available
   erb (:"rentals/index")
 end
 
 get '/rentals/:id/new' do
   @customer = Customer.find(params[:id])
-  @games = Game.all
+  @games = Game.available
   erb (:"rentals/create")
 end
 
@@ -23,4 +24,9 @@ post '/rentals/create' do
   erb (:"rentals/rent_successful")
 end
 
-{"customer_id"=>"1", "game_id"=>"1", "captures"=>[]}
+post '/rentals/:id/return' do
+  game = Game.find(params[:id])
+  game.renter = nil
+  game.update
+  redirect '/rentals'
+end

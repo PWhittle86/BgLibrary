@@ -33,8 +33,8 @@ _As a rental store manager_<br />
 _I want to be able process rentals_<br />
 _So that I can keep customers happy_<br />
 
-**Acceptance Criteria** Store managers should be able to assign stock items to customers. <br />
-**Acceptance Criteria** Store managers should be able to check rentals back into available stock. <br />
+<!-- **Acceptance Criteria** Store managers should be able to assign stock items to customers. <br /> -->
+<!-- **Acceptance Criteria** Store managers should be able to check rentals back into available stock. <br /> -->
 
 
 #### View all data
@@ -43,7 +43,7 @@ _As a rental store manager_<br />
 _I want to be able to see all the details of the stock items which are currently rented_<br />
 _So that I can keep track of my stock_<br />
 
-**Acceptance Criteria** Store managers should be able to view a list of all of their rentals.
+<!-- **Acceptance Criteria** Store managers should be able to view a list of all of their rentals. -->
 
 
 ## User Stories - Possible Extensions
