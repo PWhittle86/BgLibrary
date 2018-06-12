@@ -1,7 +1,14 @@
+<div class="heading">
 <h2>Registered Customers</h2>
+</div>
 
+<div class="list">
 <%for customer in @customers %>
 <p><a href="/customers/<%=customer.id%>"> <%=customer.full_name%></a></p>
 <%end%>
+</div>
 
-<p><a href="/customers/new/">Add Customer</a></p>
+<div class="button">
+  <form method='get' action='/customers/new/'/>
+    <input type="submit" value="Add Customer"/>
+</div>

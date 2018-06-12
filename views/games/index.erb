@@ -1,7 +1,13 @@
-<h2>Games Catalogue</h2>
+<div class="heading">
+  <h2>Games Catalogue</h2>
+</div>
 
-<%for game in @games %>
-<a href="/games/<%=game.id%>"><%=game.title%></a></p>
-<%end%>
+<div class="list">
+  <%for game in @games %>
+    <a href="/games/<%=game.id%>"><%=game.title%></a></p>
+  <%end%>
+</div>
 
-<p><a href="/games/new/">New Game</a>
+<div class="link">
+  <p><a href="/games/new/">New Game</a>
+</div>

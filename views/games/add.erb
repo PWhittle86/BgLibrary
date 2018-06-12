@@ -1,22 +1,26 @@
 <h2>Add Game</h2>
 
-<p>Please enter the details of the game you wish to add to the catalogue:</p>
+<div class="list">
+  <p>Please enter the details of the game you wish to add to the catalogue:</p>
 
-<form method='post' action='/games/create/'>
-  <label for='title'>Title:</label>
-  <input id='title' type='text' name='title'/>
+  <form method='post' action='/games/create/'>
+    <label for='title'>Title:</label>
+    <input id='title' type='text' name='title'/>
 
-  <label for='genre'>Genre:</label>
-  <input id='genre' type='text' name='genre'/>
+    <label for='genre'>Genre:</label>
+    <input id='genre' type='text' name='genre'/>
 
-  <label for='theme'>Theme:</label>
-  <input id='theme' type='text' name='theme'/>
+    <label for='theme'>Theme:</label>
+    <input id='theme' type='text' name='theme'/>
 
-  <label for='status'>Rental Status:</label>
-  <select id='status' name='status'>
-    <option value='Available'>Available</option>
-    <option value='Rented'>Rented</option>
-  </select>
+    <label for='status'>Rental Status:</label>
+    <select id='status' name='status'>
+      <option value='Available'>Available</option>
+      <option value='Rented'>Rented</option>
+    </select>
+  </div>
 
-<input type='submit' value='Add Game'/>
-</form>
+  <div class="button">
+    <input type='submit' value='Add Game'/>
+  </form>
+</div>

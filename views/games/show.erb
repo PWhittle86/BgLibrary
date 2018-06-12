@@ -1,13 +1,20 @@
+<div class="heading">
 <h2><%=@game.title%></h2>
-<p>Status:
-  <%if @game.renter == nil%>
-    Available
-  <%else%>
-    Rented by <%=@game.find_renter.full_name%>
-  <%end%></p>
-<p>Genre: <%=@game.genre%></p>
-<p>Theme: <%=@game.theme%></p>
+</div>
 
-<form method='post' action='/games/<%=@game.id%>/delete'/>
-<input type="submit" value="Delete Game"/>
+<div class="list">
+  <p>Status:
+    <%if @game.renter == nil%>
+    Available
+    <%else%>
+    Rented by <%=@game.find_renter.full_name%>
+    <%end%></p>
+    <p>Genre: <%=@game.genre%></p>
+    <p>Theme: <%=@game.theme%></p>
+</div>
+
+<div class="button>"
+  <form method='post' action='/games/<%=@game.id%>/delete'/>
+    <input type="submit" value="Delete Game"/>
+  </div>
 </form>

@@ -1,15 +1,22 @@
-<p>Name: <%=@customer.full_name%></p>
-<p>Age: <%=@customer.age%></p>
-<p>Gender: <%=@customer.gender%></p>
+<div class="heading">
+  <h2>Name: <%=@customer.full_name%></h2>
+</div>
 
-<form method='get' action='/rentals/<%=@customer.id%>/new'/>
-<input type='submit' value="Create New Rental">
-</form>
+<div class="list">
+  <p>Age: <%=@customer.age%></p>
+  <p>Gender: <%=@customer.gender%></p>
+</div>
 
-<form method='get' action='/customers/<%=@customer.id%>/edit'/>
-<input type="submit" value="Amend Customer Details"/>
-</form>
+<div class="button">
+  <form method='get' action='/rentals/<%=@customer.id%>/new'/>
+    <input type='submit' value="Create New Rental">
+  </form>
 
-<form method='post' action='/customers/<%=@customer.id%>/delete'/>
-<input type="submit" value="Delete Customer"/>
-</form>
+  <form method='get' action='/customers/<%=@customer.id%>/edit'/>
+    <input type="submit" value="Amend Customer Details"/>
+  </form>
+
+  <form method='post' action='/customers/<%=@customer.id%>/delete'/>
+    <input type="submit" value="Delete Customer"/>
+  </form>
+</div>
