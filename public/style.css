@@ -20,6 +20,10 @@ a {
   color: black;
 }
 
+a.hover {
+
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -55,10 +59,29 @@ a {
   color: black;
 }
 
-.button {
-  margin-top: 10px;
+.button_container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border: solid 1px black;
+  border-radius: 2px;
+  font-family: Noto Sans, sans-serif;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: grey;
+  transition: background-color 0.5s ease;
 }

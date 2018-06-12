@@ -7,16 +7,16 @@
   <p>Gender: <%=@customer.gender%></p>
 </div>
 
-<div class="button">
+<div class="button_container">
   <form method='get' action='/rentals/<%=@customer.id%>/new'/>
-    <input type='submit' value="Create New Rental">
+    <input class="button" type='submit' value="Create New Rental">
   </form>
 
   <form method='get' action='/customers/<%=@customer.id%>/edit'/>
-    <input type="submit" value="Amend Customer Details"/>
+    <input class="button" type="submit" value="Amend Customer Details"/>
   </form>
 
   <form method='post' action='/customers/<%=@customer.id%>/delete'/>
-    <input type="submit" value="Delete Customer"/>
+    <input class="button" type="submit" value="Delete Customer"/>
   </form>
 </div>

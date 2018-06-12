@@ -53,10 +53,10 @@ _As a rental store manager_<br />
 _I want to be able to search for stock items_<br />
 _So that I can find information quickly without having to scroll through pages_<br />
 
-**Acceptance Criteria** Create a search bar that returns data valid for the users input
+<!-- **Acceptance Criteria** Create a search bar that returns data valid for the users input -->
 
 _As a rental store manager_<br />
 _I want to be able to filter stock items by category_<br />
 _So that I can see relevant items for the customer quickly_<br />
 
-**Acceptance Criteria** Create a filter dependant on product attributes (eg cars: hatchback/SUV/estate)
+**Acceptance Criteria** Create a filter dependent on product attributes (eg cars: hatchback/SUV/estate)

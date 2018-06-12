@@ -13,8 +13,8 @@
     <p>Theme: <%=@game.theme%></p>
 </div>
 
-<div class="button">
+<div class="button_container">
   <form method='post' action='/games/<%=@game.id%>/delete'/>
-    <input type="submit" value="Delete Game"/>
+    <input class="button" type="submit" value="Delete Game"/>
   </div>
 </form>
