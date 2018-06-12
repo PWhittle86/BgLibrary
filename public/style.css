@@ -1,40 +1,65 @@
 
 body {
-background-image: url('/chess-background.jpeg');
-background-size: cover;
+background-image: url('/chess-background-copy.jpg');
 background-repeat: no-repeat;
+background-size: cover;
 }
 
 nav {
   font-family: Fjalla One, sans-serif;
   display: flex;
-  justify-content: space-around;
-  background-color: pink;
-  border: 2px solid red;
+  justify-content: center;
+}
+
+nav p {
+  margin: 0 10px;
+  color: black;
+}
+
+nav p:hover {
 }
 
 a {
-  border: 2px solid black;
-  background-color: white;
+  color: black;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Noto Sans, sans-serif;
   color: black;
 }
 
 .welcome {
   font-family: Fjalla One, sans-serif;
   font-size: 95px;
-  color: #EDAF78;
+  color: black;
 }
 
 .heading {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   font-family: Fjalla One, sans-serif;
-  color: #EDAF78;
+  color: black;
 }
 
 .list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-family: Noto Sans, sans-serif;
-  color: #EDAF78;
+  color: black;
 }
 
 .button {
-
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

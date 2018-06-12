@@ -5,9 +5,9 @@
 <div class="list">
   <%for game in @rented_games%>
   <p><%=game.title%> is currently on rent to <%=game.find_renter.full_name%>.</p>
-</div>
-<div class="button">
+  <div class="button">
   <form method='post' action='/rentals/<%=game.id%>/return'/>
     <input type="submit" value="Return Game"/>
-</div>
+  </div>
   <%end%>
+</div>
