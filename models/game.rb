@@ -40,7 +40,7 @@ class Game
     values = [user_input]
     objects_array = SqlRunner.run(sql, values)
     games_array = objects_array.map{|game| Game.new(game)}
-    return games_array.first
+    return games_array
   end
 
   def self.available #Used to identify games that are not currently being rented.

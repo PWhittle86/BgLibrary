@@ -1,0 +1,8 @@
+<div class="heading">
+<h2>Search Results</h2>
+</div>
+<%for game in @game_array%>
+<div class="list">
+  <p><a href="/games/<%=game.id%>"><%=game.title%></a></p>
+</div>
+<%end%>

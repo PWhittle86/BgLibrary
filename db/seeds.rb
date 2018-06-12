@@ -52,6 +52,14 @@ game5 = Game.new(
 
 game5.save
 
+game6 = Game.new(
+  {"title" => "Twilight Struggle",
+  "genre" => "Wargame",
+  "theme" => "Cold War",
+  "status" => "Available"}
+)
+
+game6.save
 
 ###################################################
 

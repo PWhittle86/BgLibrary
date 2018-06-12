@@ -12,8 +12,17 @@ end
 
 get '/games/search' do
   user_input = params[:search]
-  @game = Game.find_by_name(user_input)
-  erb (:"games/show")
+  @game_array = Game.find_by_name(user_input)
+
+  if @game_array.count > 1
+    erb (:"games/show_multiple")
+  elsif @game_array.count == 1
+    @game = @game_array.first
+    erb (:"games/show")
+  else
+    erb (:"games/not_found")
+  end
+
 end
 
 get '/games/new/' do
