@@ -2,6 +2,12 @@
   <h2>Games Catalogue</h2>
 </div>
 
+<div class="search">
+  <form method='get' action='/games/search'>
+    <input id='search' type="text" placeholder="Search..." name='search'>
+  </form>
+</div>
+
 <div class="list">
   <%for game in @games %>
     <a href="/games/<%=game.id%>"><%=game.title%></a></p>

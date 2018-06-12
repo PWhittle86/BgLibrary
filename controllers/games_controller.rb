@@ -10,13 +10,19 @@ get '/games' do
   erb (:"games/index")
 end
 
-get '/games/:id' do
-  @game = Game.find(params[:id])
+get '/games/search' do
+  user_input = params[:search]
+  @game = Game.find_by_name(user_input)
   erb (:"games/show")
 end
 
-get '/games/new/' do #Ask an instructor why I need the extra /.
+get '/games/new/' do
   erb (:"games/add")
+end
+
+get '/games/:id' do
+  @game = Game.find(params[:id])
+  erb (:"games/show")
 end
 
 post '/games/:id/delete' do

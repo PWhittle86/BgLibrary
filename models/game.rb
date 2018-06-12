@@ -35,6 +35,14 @@ class Game
     return result
   end
 
+  def self.find_by_name(user_input) #Used to allow the user to search for a game within his stock by name. Returns the first game in the object array.
+    sql = "SELECT * FROM games WHERE title LIKE '%' || $1 || '%'"
+    values = [user_input]
+    objects_array = SqlRunner.run(sql, values)
+    games_array = objects_array.map{|game| Game.new(game)}
+    return games_array.first
+  end
+
   def self.available #Used to identify games that are not currently being rented.
     sql = 'SELECT * FROM games WHERE renter IS NULL'
     values = []

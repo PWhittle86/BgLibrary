@@ -16,9 +16,6 @@ nav p {
   color: black;
 }
 
-nav p:hover {
-}
-
 a {
   color: black;
 }
@@ -33,6 +30,8 @@ a {
 }
 
 .welcome {
+  display: flex;
+  justify-content: center;
   font-family: Fjalla One, sans-serif;
   font-size: 95px;
   color: black;
