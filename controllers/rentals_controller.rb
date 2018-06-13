@@ -25,8 +25,8 @@ post '/rentals/create' do
 end
 
 post '/rentals/:id/return' do
-  game = Game.find(params[:id])
-  game.renter = nil
-  game.update
-  redirect '/rentals'
+  @game = Game.find(params[:id])
+  @game.renter = nil
+  @game.update
+  erb (:"rentals/rent_returned")
 end
