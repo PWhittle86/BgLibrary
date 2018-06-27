@@ -16,6 +16,9 @@ nav p {
   color: black;
 }
 
+a {
+  color: black;
+}
 
 .form {
   display: flex;
